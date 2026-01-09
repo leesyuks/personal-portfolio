@@ -1,0 +1,115 @@
+<style>
+/* --- CORE RESET & SMOOTHING --- */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* Inherit typography and colors for form and navigation elements */
+a, .w-input, .w-select, .w-tab-link, .w-nav-link, .w-nav-brand, 
+.w-dropdown-btn, .w-dropdown-toggle, .w-slider-arrow-left, 
+.w-slider-arrow-right, .w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+
+/* --- ACCESSIBILITY --- */
+/* Focus state for keyboard users only */
+:focus-visible {
+  outline: 0.125rem solid #4d65ff;
+  outline-offset: 0.125rem;
+}
+
+/* Hide focus ring for mouse users */
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
+
+/* --- RICH TEXT RESET --- */
+/* Remove top margin from first child and bottom from last child */
+.w-richtext > :first-child, 
+.w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+.w-richtext > :last-child, 
+.w-richtext ol li:last-child, 
+.w-richtext ul li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* --- UTILITY CLASSES --- */
+.pointer-events-off { pointer-events: none; }
+.pointer-events-on { pointer-events: auto; }
+
+/* Modern Aspect Ratio for Square Divs */
+.div-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Center Containers */
+.container-medium, .container-small, .container-large {
+  margin-inline: auto !important; /* Shorthand for left and right */
+}
+
+/* Line Clamping (2 and 3 lines) */
+.text-style-2lines, .text-style-3lines {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+.text-style-2lines { -webkit-line-clamp: 2; }
+.text-style-3lines { -webkit-line-clamp: 3; }
+
+.display-inlineflex { display: inline-flex; }
+
+/* Hiding Elements across breakpoints */
+.hide { display: none !important; }
+
+@media screen and (max-width: 991px) { .hide-tablet { display: none !important; } }
+@media screen and (max-width: 767px) { .hide-mobile-landscape { display: none !important; } }
+@media screen and (max-width: 479px) { .hide-mobile { display: none !important; } }
+
+/* --- SPACING RESET UTILITIES --- */
+/* Using margin-inline/block for cleaner resets */
+.margin-0 { margin: 0rem !important; }
+.padding-0 { padding: 0rem !important; }
+.spacing-clean { padding: 0rem !important; margin: 0rem !important; }
+
+/* One-directional spacing resets (Client-First standard) */
+.margin-top, .margin-vertical { margin-bottom: 0rem !important; margin-left: 0rem !important; margin-right: 0rem !important; }
+.padding-top, .padding-vertical { padding-bottom: 0rem !important; padding-left: 0rem !important; padding-right: 0rem !important; }
+
+.margin-right, .margin-horizontal { margin-top: 0rem !important; margin-bottom: 0rem !important; margin-left: 0rem !important; }
+.padding-right, .padding-horizontal { padding-top: 0rem !important; padding-bottom: 0rem !important; padding-left: 0rem !important; }
+
+.margin-bottom { margin-top: 0rem !important; margin-right: 0rem !important; margin-left: 0rem !important; }
+.padding-bottom { padding-top: 0rem !important; padding-right: 0rem !important; padding-left: 0rem !important; }
+
+.margin-left { margin-top: 0rem !important; margin-right: 0rem !important; margin-bottom: 0rem !important; }
+.padding-left { padding-top: 0rem !important; padding-right: 0rem !important; padding-bottom: 0rem !important; }
+
+/* Truncation */
+.truncate-width { 
+  width: 100%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+/* Remove Scrollbar */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Custom Selection Color (Optional Personalization) */
+::selection {
+  background: #4d65ff;
+  color: #ffffff;
+}
+</style>
